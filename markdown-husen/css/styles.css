@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    resize: none;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#notes-container {
+    flex: 1;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    position: relative;
+}
+
+.note {
+    background-color: #ffeb3b;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: left;
+    white-space: pre-wrap;
+    position: absolute;
+    cursor: move;
+    user-select: text; /* テキスト選択を可能に */
+    width: auto; /* 幅を自動調整 */
+    max-width: 200px; /* 最大幅を設定 */
+    border: 2px solid transparent; /* フォーカス時の枠線の色を設定 */
+}
+
+.note:focus-within {
+    border-color: #007BFF; /* フォーカス時の枠線の色を設定 */
+}
+
+.delete-button, .edit-button {
+    position: absolute;
+    top: -5px; /* 付箋の右上外に配置 */
+    width: 16px; /* アイコンサイズを小さく */
+    height: 16px;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+.delete-button {
+    right: -5px;
+    background-image: url('../img/trash-icon.png');
+}
+
+.edit-button {
+    right: 20px; /* ボタンの間隔を調整 */
+    background-image: url('../img/edit-icon.png');
+}
+
+.note:focus-within .delete-button,
+.note:focus-within .edit-button {
+    display: block;
+}
+
+.edit-mode {
+    user-select: text; /* 編集モードではテキスト選択を可能に */
+    border: 2px solid #007BFF; /* フォーカス時の枠線の色を設定 */
+}
+
+.edit-mode .note-content {
+    display: none;
+}
+
+.edit-mode textarea {
+    display: block;
+    width: 100%;
+    height: 100px;
+}
+
+.edit-mode .save-button,
+.edit-mode .cancel-button {
+    display: inline-block;
+}
+
+.save-button,
+.cancel-button {
+    display: none;
+    margin-top: 5px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.save-button:hover,
+.cancel-button:hover {
+    background-color: #0056b3;
+}
