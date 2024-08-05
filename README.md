@@ -54,4 +54,4 @@ https://tech-ryu.sakura.ne.jp/memo-app/markdown-husen/
   - ドラッグによって各要素を操作するようなアプリは難しいと思っていたが、CSSの設定のみで実現できるところも多く、思ったよりは簡単に実装できたと思う
   - あとからHTML（画面上）に要素を追加していく方法を学ぶことができたので、今後の開発にも生かせそう
 - [参考記事]
-  - [mark](https://github.com/markedjs/marked)
+  - [marked (マークダウンHTML生成)](https://github.com/markedjs/marked)
