@@ -16,7 +16,7 @@
 
 ## ③DEMO
 
-https://tech-ryu.sakura.ne.jp/markdown-husen/
+https://tech-ryu.sakura.ne.jp/memo-app/markdown-husen/
 
 ## ④作ったアプリケーション用のIDまたはPasswordがある場合
 
